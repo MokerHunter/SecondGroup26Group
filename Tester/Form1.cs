@@ -29,6 +29,7 @@ namespace Tester
             Hide();
             Form2 newForm = new Form2();
             this.Width = 1200;
+            this.Width = 1200;
             newForm.Show();
         }
 
