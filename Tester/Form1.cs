@@ -12,32 +12,50 @@ namespace Tester
 {
     public partial class Form1 : Form
     {
-      
+        string[] str;
         public Form1()
         {
             InitializeComponent();
-            this.Size = new Size(1000, 800);
-            this.Left = 0;
-            button1.Location = new Point(this.Size.Width / 8, this.Size.Height - this.Size.Height / 5);
-            button2.Location = new Point(2 * this.Size.Width / 8, this.Size.Height - this.Size.Height / 5);
-            button3.Location = new Point(3 * this.Size.Width / 8, this.Size.Height - this.Size.Height / 5);
-            button4.Location = new Point(4 * this.Size.Width / 8, this.Size.Height - this.Size.Height / 5);
+            //button2.Enabled = true;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void создатьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Hide();
             Form2 newForm = new Form2();
-            this.Width = 1200;
-            this.Width = 1200;
             newForm.Show();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
             Application.Exit();
         }
-       
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Form3 newForm = new Form3();
+            newForm.button2.Text = textBox2.Text;
+            newForm.ShowDialog();
+        }
+
+        private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "Файлы txt|*.txt|Файлы dat|*.dat";
+            if (openFileDialog1.ShowDialog() == DialogResult.Cancel) return;
+            string filename = openFileDialog1.FileName;
+
+            str = System.IO.File.ReadAllLines(filename);
+            textBox1.Text = str[0];
+            textBox2.Text = filename;
+            button3.Text = "Ваш тест готов";
+            button2.Enabled = true;
+        }
+
+        private void авторыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Над проектом работали:\n\nЖуравский Дмитрий\n\nИванов Семен\n\nСирбаев Вильдан\n\nСуслопарова Анастасия\n\nФаузетдинов Ильнар");
+        }
     }
 }
