@@ -90,7 +90,7 @@
             // 
             this.panel1.Location = new System.Drawing.Point(57, 163);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(935, 626);
+            this.panel1.Size = new System.Drawing.Size(935, 612);
             this.panel1.TabIndex = 5;
             // 
             // button2
@@ -160,7 +160,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(226, 36);
             this.button4.TabIndex = 13;
-            this.button4.Text = "button4";
+            this.button4.Text = "Сохранить";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -168,7 +168,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1064, 687);
+            this.ClientSize = new System.Drawing.Size(1064, 805);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox3);
